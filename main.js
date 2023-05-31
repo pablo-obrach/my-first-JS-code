@@ -17,6 +17,6 @@ hero.addEventListener("click", () => {
     };
   } else {
     hero.classList.remove("face-up");
-    contadorClicks = estadoOriginal.contador + 1;
+    contadorClicks = estadoOriginal.contador;
   }
 });
