@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pixel-size: 11;
+}
+
+body {
+  background: rgb(80, 100, 20);
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+}
+
+.character {
+  width: calc(32px * var(--pixel-size));
+  height: calc(32px * var(--pixel-size));
+  margin: 3rem auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-sprite-sheet {
+  animation: moveSpriteSheet 1s steps(4) infinite;
+  width: calc(128px * var(--pixel-size));
+  position: absolute;
+}
+.character-shadow {
+  position: absolute;
+  width: calc(32px * var(--pixel-size));
+}
+.face-right {
+  top: calc(-32px * var(--pixel-size));
+}
+.face-up {
+  top: calc(-64px * var(--pixel-size));
+}
+.face-left {
+  top: calc(-97px * var(--pixel-size));
+}
+
+@keyframes moveSpriteSheet {
+  from {
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
